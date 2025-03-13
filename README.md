@@ -33,8 +33,8 @@ Bu proje, modern web teknolojileri kullanılarak geliştirilmiş minimalist bir 
 
 1. Projeyi klonlayın
    ```bash
-   git clone https://github.com/kullaniciadi/görevio.git
-   cd görevio
+   git clone https://github.com/UmutTKMN/gorevio.git
+   cd gorevio
    ```
 
 2. Bağımlılıkları yükleyin
