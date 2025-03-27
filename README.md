@@ -1,50 +1,72 @@
-# 📝 Görevio - Modern Todo Uygulaması
+# 📝 Görevio - Modern Görev Yönetim Uygulaması
 
-![Görevio Logo](/public/g.png)
+<div align="center">
+  <img src="/public/g.png" alt="Görevio Uygulaması" width="150px">
+</div>
 
-Görevio, modern ve kullanıcı dostu bir görev yönetim uygulamasıdır. Firebase kimlik doğrulama ve gerçek zamanlı veritabanı ile entegre edilmiş, React tabanlı bu uygulama, görevlerinizi etkili bir şekilde organize etmenizi sağlar.
+## 📋 İçerik
+
+- [Proje Hakkında](#-proje-hakkında)
+- [Özellikler](#-özellikler)
+- [Ekran Görüntüleri](#-ekran-görüntüleri)
+- [Teknolojiler](#-teknolojiler)
+- [Kurulum](#-kurulum)
+- [Güvenlik Özellikleri](#-güvenlik-özellikleri)
+- [Tarayıcı Desteği](#-tarayıcı-desteği)
+- [Lisans](#-lisans)
+
+## 📝 Proje Hakkında
+
+Görevio, modern ve kullanıcı dostu arayüzü ile görevlerinizi etkili bir şekilde yönetmenizi sağlayan bir web uygulamasıdır. Firebase kimlik doğrulama ve gerçek zamanlı veritabanı entegrasyonu sayesinde görevlerinizi her yerden güvenli bir şekilde yönetebilirsiniz.
+
+Sezgisel kullanıcı arayüzü, karanlık/aydınlık tema desteği ve gerçek zamanlı güncellemeler ile görev yönetimi deneyiminizi zenginleştirir.
 
 ## ✨ Özellikler
 
-- 🔐 **Google ile Giriş**: Güvenli ve hızlı giriş deneyimi
-- 🌓 **Aydınlık/Karanlık Tema**: Göz yormayan arayüz seçenekleri
-- ➕ **Görev Ekleme/Düzenleme/Silme**: Tam kapsamlı görev yönetimi
-- 🔍 **Görev Arama**: Görevleriniz arasında hızlıca arama yapın
-- 🏷️ **Etiketler ve Öncelikler**: Görevlerinizi kategorize edin ve önemlerine göre sıralayın
-- 📊 **Görev İstatistikleri**: Görev tamamlama oranları ve performans takibi
-- 🔔 **Bildirimler**: Önemli görevler için hatırlatmalar
-- 📱 **Responsive Tasarım**: Mobil ve masaüstü cihazlarda kusursuz deneyim
-- 🔄 **Gerçek Zamanlı Güncelleme**: Firebase ile anlık veri senkronizasyonu
+- **🔐 Google ile Giriş**: Güvenli ve hızlı giriş deneyimi
+- **🌓 Aydınlık/Karanlık Tema**: Göz yormayan arayüz seçenekleri
+- **➕ Görev Ekleme/Düzenleme/Silme**: Tam kapsamlı görev yönetimi
+- **🔍 Görev Arama**: Görevleriniz arasında hızlıca arama yapın
+- **🏷️ Etiketler ve Öncelikler**: Görevlerinizi kategorize edin ve önemlerine göre sıralayın
+- **📊 Görev İstatistikleri**: Görev tamamlama oranları ve performans takibi
+- **🔔 Bildirimler**: Önemli görevler için hatırlatmalar
+- **📱 Responsive Tasarım**: Mobil ve masaüstü cihazlarda kusursuz deneyim
+- **🔄 Gerçek Zamanlı Güncelleme**: Firebase ile anlık veri senkronizasyonu
+- **⏱️ Son Tarih Takibi**: Görevleriniz için bitiş tarihi belirleyin ve takip edin
+- **📂 Görev Organizasyonu**: Görevlerinizi kategorilere ayırın ve düzenleyin
 
-## 🖼️ Ekran Görüntüleri
+## 📸 Ekran Görüntüleri
 
-### Giriş Ekranı
+<div align="center">
+  <img src="screenshots/login.png" alt="Giriş Ekranı" width="600px">
+  <p><em>Giriş Ekranı</em></p>
+  
+  <img src="screenshots/list.png" alt="Görev Listesi" width="600px">
+  <p><em>Görev Listesi</em></p>
+  
+  <img src="screenshots/create.png" alt="Görev Ekleme" width="600px">
+  <p><em>Görev Ekleme ve Düzenleme</em></p>
+</div>
 
-![Giriş Ekranı](screenshots/login.png)
+## 🛠️ Teknolojiler
 
-### Görev Listesi
-
-![Görev Listesi](screenshots/list.png)
-
-### Görev Ekleme/Düzenleme
-
-![Görev Ekleme](screenshots/create.png)
-
-## 🛠️ Kullanılan Teknolojiler
+Bu projede aşağıdaki teknolojileri kullanıyoruz:
 
 - **Frontend**:
-  - React 19
-  - Tailwind CSS
-  - Context API (State Yönetimi)
+  - [React 19](https://react.dev/) - Modern kullanıcı arayüzü geliştirme
+  - [Tailwind CSS](https://tailwindcss.com/) - Stil ve tasarım
+  - [Context API](https://react.dev/reference/react/createContext) - State yönetimi
 - **Backend**:
-  - Firebase Authentication
-  - Firestore Database
+  - [Firebase Authentication](https://firebase.google.com/docs/auth) - Kullanıcı kimlik doğrulama
+  - [Firestore Database](https://firebase.google.com/docs/firestore) - Gerçek zamanlı veritabanı
 - **Geliştirme Araçları**:
-  - Vite.js
-  - ESLint
-  - PNPM
+  - [Vite.js](https://vitejs.dev/) - Hızlı geliştirme ortamı
+  - [ESLint](https://eslint.org/) - Kod kalitesi
+  - [PNPM](https://pnpm.io/) - Hızlı ve verimli paket yönetimi
 
 ## 🚀 Kurulum
+
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları takip edin:
 
 ### Ön Koşullar
 
@@ -54,27 +76,28 @@ Görevio, modern ve kullanıcı dostu bir görev yönetim uygulamasıdır. Fireb
 
 ### Adımlar
 
-1. **Repoyu klonlayın**:
+1. Repoyu klonlayın:
 
    ```bash
-   git clone https://github.com/UmutTKMN/gorevio.git
+   git clone https://github.com/kullaniciadi/gorevio.git
    cd gorevio
    ```
 
-2. **Bağımlılıkları yükleyin**:
+2. Bağımlılıkları yükleyin:
 
    ```bash
    pnpm install
    ```
 
-3. **Firebase yapılandırması**:
+3. `.env.example` dosyasını `.env` olarak kopyalayın:
 
-   - Firebase konsolundan yeni bir proje oluşturun
-   - Authentication ve Firestore Database'i etkinleştirin
-   - Google giriş yöntemini etkinleştirin
-   - `.env` dosyasını projenizin kök dizinine oluşturun:
+   ```bash
+   cp .env.example .env
+   ```
 
-   ```env
+4. `.env` dosyasını açın ve Firebase yapılandırma bilgilerinizi ekleyin:
+
+   ```
    VITE_FIREBASE_API_KEY=your-api-key
    VITE_FIREBASE_AUTH_DOMAIN=your-auth-domain
    VITE_FIREBASE_PROJECT_ID=your-project-id
@@ -84,46 +107,27 @@ Görevio, modern ve kullanıcı dostu bir görev yönetim uygulamasıdır. Fireb
    VITE_FIREBASE_MEASUREMENT_ID=your-measurement-id
    ```
 
-4. **Uygulamayı başlatın**:
+   > 📝 **Not**: Firebase yapılandırma bilgilerinizi [Firebase Console](https://console.firebase.google.com/) üzerinden alabilirsiniz.
+
+5. Uygulamayı başlatın:
 
    ```bash
    pnpm dev
    ```
 
-5. Tarayıcınızda `http://localhost:5173` adresine gidin ve Görevio'yu kullanmaya başlayın.
-
-## 📋 Kullanım
-
-1. **Hesap Oluşturma/Giriş**:
-
-   - Google hesabınızla giriş yapın
-
-2. **Görev Ekleme**:
-
-   - "Yeni görev ekle" düğmesine tıklayın
-   - Görev başlığı, açıklama ve varsa bitiş tarihi girin
-   - İsteğe bağlı olarak görevin önceliğini belirleyin
-   - Etiketler ekleyerek görevlerinizi kategorize edin
-
-3. **Görev Yönetimi**:
-
-   - Görevleri tamamlamak için yanındaki kutucuğu işaretleyin
-   - Görevleri düzenlemek için kalem simgesine tıklayın
-   - Görevleri silmek için çöp kutusu simgesine tıklayın
-   - Görev detaylarını görmek için görevin üzerine tıklayın
-
-4. **Filtreleme ve Arama**:
-   - Görevleri önceliğe, tarihe veya tamamlanma durumuna göre filtreleyin
-   - Arama kutusunu kullanarak görevler arasında arama yapın
+6. Tarayıcınızda şu adresi açın: `http://localhost:5173`
 
 ## 🛡️ Güvenlik Özellikleri
+
+Görevio uygulaması, verilerinizin güvenliği için tasarlanmıştır:
 
 - **Veri Doğrulama**: Tüm kullanıcı girdileri sunucu tarafında doğrulanır
 - **XSS Koruması**: Metin girdileri otomatik olarak temizlenir
 - **Rate Limiting**: API istekleri için hız sınırlaması
 - **Firebase Güvenlik Kuralları**: Kullanıcıların yalnızca kendi verilerine erişmesini sağlar
+- **Güvenli Kimlik Doğrulama**: Google oturum açma ve güvenli şifre yönetimi
 
-## 📱 Tarayıcı Desteği ve Uyumluluk
+## 📱 Tarayıcı Desteği
 
 Görevio, modern tarayıcıların tüm versiyonlarında en iyi performansı gösterir:
 
@@ -134,25 +138,16 @@ Görevio, modern tarayıcıların tüm versiyonlarında en iyi performansı gös
 
 **Not**: Tarayıcı takip önleme özelliği aktif olduğunda, bazı işlevler sınırlı olabilir. Bu durumda uygulama size yardımcı olmak için bir uyarı gösterecektir.
 
-## 🤝 Katkıda Bulunma
-
-Katkılarınızı memnuniyetle karşılıyoruz! Projeye katkıda bulunmak için:
-
-1. Bu repoyu forklayın
-2. Yeni bir özellik dalı oluşturun (`git checkout -b yeni-ozellik`)
-3. Değişikliklerinizi yapın ve commit edin (`git commit -m 'Yeni özellik: Açıklama'`)
-4. Dalınıza push edin (`git push origin yeni-ozellik`)
-5. Bir Pull Request oluşturun
-
 ## 📄 Lisans
 
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
+Bu proje [MIT lisansı](LICENSE) altında lisanslanmıştır. Detaylı bilgi için lisans dosyasını inceleyebilirsiniz.
 
-## 📞 İletişim
+---
 
-- Website: [kahrastudio.art](https://kahrastudio.art)
-- Email: info@kahrastudio.art
-- Twitter: [@kahrastudio](https://twitter.com/kahrastudio)
-- Instagram: [@kahrastudio](https://instagram.com/kahrastudio)
-
-## 🙏 Teşekkürler
+<div align="center">
+  <p>❤️ ile geliştirildi</p>
+  <p>
+    <a href="https://github.com/kahrastudio">GitHub</a> •
+    <a href="https://twitter.com/kahrastudio">Twitter</a>
+  </p>
+</div>
