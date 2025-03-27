@@ -79,7 +79,7 @@ Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları takip 
 1. Repoyu klonlayın:
 
    ```bash
-   git clone https://github.com/kullaniciadi/gorevio.git
+   git clone https://github.com/UmuTKMN/gorevio.git
    cd gorevio
    ```
 
