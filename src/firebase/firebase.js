@@ -1,18 +1,33 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
-import { getFirestore, collection, doc, addDoc, updateDoc, deleteDoc, query, where, getDocs } from 'firebase/firestore';
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
+import {
+  getFirestore,
+  collection,
+  doc,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  query,
+  where,
+  getDocs,
+} from "firebase/firestore";
 
-// Firebase yapılandırma bilgileri 
-// NOT: Bu bilgileri Firebase konsolundan edinebilirsiniz 
+// Firebase yapılandırma bilgileri
+// NOT: Bu bilgileri Firebase konsolundan edinebilirsiniz
 // https://console.firebase.google.com
 const firebaseConfig = {
-    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-    appId: import.meta.env.VITE_FIREBASE_APP_ID,
-    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 // Firebase'i başlat
@@ -24,7 +39,7 @@ const googleProvider = new GoogleAuthProvider();
 const db = getFirestore(app);
 
 // Todo koleksiyonu referansı
-const todosCollection = collection(db, 'todos');
+const todosCollection = collection(db, "todos");
 
 // Google ile giriş fonksiyonu
 export const signInWithGoogle = async () => {
@@ -32,13 +47,13 @@ export const signInWithGoogle = async () => {
     const result = await signInWithPopup(auth, googleProvider);
     return {
       user: result.user,
-      success: true
+      success: true,
     };
   } catch (error) {
     console.error("Google ile giriş hatası:", error);
     return {
       success: false,
-      error: error.message
+      error: error.message,
     };
   }
 };
@@ -52,7 +67,7 @@ export const logoutUser = async () => {
     console.error("Çıkış yapma hatası:", error);
     return {
       success: false,
-      error: error.message
+      error: error.message,
     };
   }
 };
@@ -63,13 +78,13 @@ export const addTodoToFirestore = async (userId, todoData) => {
     const docRef = await addDoc(todosCollection, {
       ...todoData,
       userId,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     });
     return {
       id: docRef.id,
       ...todoData,
       userId,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     };
   } catch (error) {
     console.error("Todo eklenirken hata oluştu:", error);
@@ -79,7 +94,7 @@ export const addTodoToFirestore = async (userId, todoData) => {
 
 export const updateTodoInFirestore = async (todoId, updatedData) => {
   try {
-    const todoRef = doc(db, 'todos', todoId);
+    const todoRef = doc(db, "todos", todoId);
     await updateDoc(todoRef, updatedData);
     return true;
   } catch (error) {
@@ -90,7 +105,7 @@ export const updateTodoInFirestore = async (todoId, updatedData) => {
 
 export const deleteTodoFromFirestore = async (todoId) => {
   try {
-    const todoRef = doc(db, 'todos', todoId);
+    const todoRef = doc(db, "todos", todoId);
     await deleteDoc(todoRef);
     return true;
   } catch (error) {
@@ -103,12 +118,12 @@ export const fetchUserTodos = async (userId) => {
   try {
     const q = query(todosCollection, where("userId", "==", userId));
     const querySnapshot = await getDocs(q);
-    
+
     const todos = [];
     querySnapshot.forEach((doc) => {
       todos.push({ id: doc.id, ...doc.data() });
     });
-    
+
     return todos;
   } catch (error) {
     console.error("Todoları getirirken hata oluştu:", error);

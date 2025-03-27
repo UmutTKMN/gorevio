@@ -1,96 +1,158 @@
-# Görevio Uygulaması
+# 📝 Görevio - Modern Todo Uygulaması
 
-Bu proje, modern web teknolojileri kullanılarak geliştirilmiş minimalist bir todo uygulamasıdır. Kullanıcılar görevlerini ekleyebilir, düzenleyebilir, tamamlayabilir ve silebilirler.
+![Görevio Logo](/public/g.png)
 
-## Özellikler
+Görevio, modern ve kullanıcı dostu bir görev yönetim uygulamasıdır. Firebase kimlik doğrulama ve gerçek zamanlı veritabanı ile entegre edilmiş, React tabanlı bu uygulama, görevlerinizi etkili bir şekilde organize etmenizi sağlar.
 
-- 📝 Yeni görev ekleme
-- ✅ Görevleri tamamlandı olarak işaretleme
-- 🗑️ Görevleri silme
-- ✏️ Görevleri düzenleme
-- 🔖 Görevleri kategori/öncelik ile filtreleme
-- 🌐 Google ile giriş yapabilme
-- 💾 Firebase kullanarak verileri bulut ortamında saklama
-- 📱 Responsive tasarım (mobil ve masaüstü uyumlu)
+## ✨ Özellikler
 
-## Teknolojiler
+- 🔐 **Google ile Giriş**: Güvenli ve hızlı giriş deneyimi
+- 🌓 **Aydınlık/Karanlık Tema**: Göz yormayan arayüz seçenekleri
+- ➕ **Görev Ekleme/Düzenleme/Silme**: Tam kapsamlı görev yönetimi
+- 🔍 **Görev Arama**: Görevleriniz arasında hızlıca arama yapın
+- 🏷️ **Etiketler ve Öncelikler**: Görevlerinizi kategorize edin ve önemlerine göre sıralayın
+- 📊 **Görev İstatistikleri**: Görev tamamlama oranları ve performans takibi
+- 🔔 **Bildirimler**: Önemli görevler için hatırlatmalar
+- 📱 **Responsive Tasarım**: Mobil ve masaüstü cihazlarda kusursuz deneyim
+- 🔄 **Gerçek Zamanlı Güncelleme**: Firebase ile anlık veri senkronizasyonu
 
-- **Frontend**: React 19, Vite
-- **Stil**: Tailwind CSS 4
-- **Backend/Veritabanı**: Firebase (Authentication, Firestore)
-- **Paket Yöneticisi**: pnpm
-- **Diğer**: ESLint
+## 🖼️ Ekran Görüntüleri
 
-## Kurulum
+### Giriş Ekranı
+
+![Giriş Ekranı](screenshots/login.png)
+
+### Görev Listesi
+
+![Görev Listesi](screenshots/list.png)
+
+### Görev Ekleme/Düzenleme
+
+![Görev Ekleme](screenshots/create.png)
+
+## 🛠️ Kullanılan Teknolojiler
+
+- **Frontend**:
+  - React 19
+  - Tailwind CSS
+  - Context API (State Yönetimi)
+- **Backend**:
+  - Firebase Authentication
+  - Firestore Database
+- **Geliştirme Araçları**:
+  - Vite.js
+  - ESLint
+  - PNPM
+
+## 🚀 Kurulum
 
 ### Ön Koşullar
 
 - Node.js (v18 veya üzeri)
-- pnpm
-- Firebase hesabı
+- PNPM
+- Firebase Hesabı
 
 ### Adımlar
 
-1. Projeyi klonlayın
+1. **Repoyu klonlayın**:
+
    ```bash
    git clone https://github.com/UmutTKMN/gorevio.git
    cd gorevio
    ```
 
-2. Bağımlılıkları yükleyin
+2. **Bağımlılıkları yükleyin**:
+
    ```bash
    pnpm install
    ```
 
-3. `.env.example` dosyasını .env olarak kopyalayın ve Firebase yapılandırma bilgilerinizi girin
-   ```bash
-   cp .env.example .env
+3. **Firebase yapılandırması**:
+
+   - Firebase konsolundan yeni bir proje oluşturun
+   - Authentication ve Firestore Database'i etkinleştirin
+   - Google giriş yöntemini etkinleştirin
+   - `.env` dosyasını projenizin kök dizinine oluşturun:
+
+   ```env
+   VITE_FIREBASE_API_KEY=your-api-key
+   VITE_FIREBASE_AUTH_DOMAIN=your-auth-domain
+   VITE_FIREBASE_PROJECT_ID=your-project-id
+   VITE_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+   VITE_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+   VITE_FIREBASE_APP_ID=your-app-id
+   VITE_FIREBASE_MEASUREMENT_ID=your-measurement-id
    ```
 
-4. Geliştirme sunucusunu başlatın
+4. **Uygulamayı başlatın**:
+
    ```bash
    pnpm dev
    ```
 
-## Firebase Yapılandırması
+5. Tarayıcınızda `http://localhost:5173` adresine gidin ve Görevio'yu kullanmaya başlayın.
 
-Bu uygulama, kullanıcı kimlik doğrulama ve veri depolama için Firebase kullanmaktadır. Kendi Firebase projenizi oluşturmak için:
+## 📋 Kullanım
 
-1. [Firebase Console](https://console.firebase.google.com)'a gidin
-2. Yeni bir proje oluşturun
-3. Authentication bölümünden Google Authentication'ı etkinleştirin
-4. Firestore Database'i oluşturun
-5. Proje ayarlarından web uygulamanızı kaydedin ve yapılandırma bilgilerini alın
-6. Bu bilgileri .env dosyanıza ekleyin
+1. **Hesap Oluşturma/Giriş**:
 
-## Kullanım
+   - Google hesabınızla giriş yapın
 
-Uygulama başladıktan sonra:
+2. **Görev Ekleme**:
 
-1. Google hesabınızla giriş yapın
-2. "Yeni görev ekle" alanından görevinizi yazın
-3. Görevinize kategori veya öncelik atayabilirsiniz
-4. Görevlerinizi tamamladığınızda işaretleyin
-5. Gerektiğinde görevleri düzenleyin veya silin
+   - "Yeni görev ekle" düğmesine tıklayın
+   - Görev başlığı, açıklama ve varsa bitiş tarihi girin
+   - İsteğe bağlı olarak görevin önceliğini belirleyin
+   - Etiketler ekleyerek görevlerinizi kategorize edin
 
-## Dağıtım
+3. **Görev Yönetimi**:
 
-Projeyi canlı ortama almak için:
+   - Görevleri tamamlamak için yanındaki kutucuğu işaretleyin
+   - Görevleri düzenlemek için kalem simgesine tıklayın
+   - Görevleri silmek için çöp kutusu simgesine tıklayın
+   - Görev detaylarını görmek için görevin üzerine tıklayın
 
-```bash
-pnpm build
-```
+4. **Filtreleme ve Arama**:
+   - Görevleri önceliğe, tarihe veya tamamlanma durumuna göre filtreleyin
+   - Arama kutusunu kullanarak görevler arasında arama yapın
 
-Bu komut, `dist` klasöründe dağıtıma hazır dosyalar oluşturacaktır.
+## 🛡️ Güvenlik Özellikleri
 
-## Katkıda Bulunma
+- **Veri Doğrulama**: Tüm kullanıcı girdileri sunucu tarafında doğrulanır
+- **XSS Koruması**: Metin girdileri otomatik olarak temizlenir
+- **Rate Limiting**: API istekleri için hız sınırlaması
+- **Firebase Güvenlik Kuralları**: Kullanıcıların yalnızca kendi verilerine erişmesini sağlar
 
-1. Bu repo'yu fork edin
-2. Yeni bir branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Add some amazing feature'`)
-4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
-5. Pull Request oluşturun
+## 📱 Tarayıcı Desteği ve Uyumluluk
 
-## Lisans
+Görevio, modern tarayıcıların tüm versiyonlarında en iyi performansı gösterir:
 
-Bu proje MIT lisansı altında lisanslanmıştır.
+- Chrome (son 2 sürüm)
+- Firefox (son 2 sürüm)
+- Safari (son 2 sürüm)
+- Edge (son 2 sürüm)
+
+**Not**: Tarayıcı takip önleme özelliği aktif olduğunda, bazı işlevler sınırlı olabilir. Bu durumda uygulama size yardımcı olmak için bir uyarı gösterecektir.
+
+## 🤝 Katkıda Bulunma
+
+Katkılarınızı memnuniyetle karşılıyoruz! Projeye katkıda bulunmak için:
+
+1. Bu repoyu forklayın
+2. Yeni bir özellik dalı oluşturun (`git checkout -b yeni-ozellik`)
+3. Değişikliklerinizi yapın ve commit edin (`git commit -m 'Yeni özellik: Açıklama'`)
+4. Dalınıza push edin (`git push origin yeni-ozellik`)
+5. Bir Pull Request oluşturun
+
+## 📄 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
+
+## 📞 İletişim
+
+- Website: [kahrastudio.art](https://kahrastudio.art)
+- Email: info@kahrastudio.art
+- Twitter: [@kahrastudio](https://twitter.com/kahrastudio)
+- Instagram: [@kahrastudio](https://instagram.com/kahrastudio)
+
+## 🙏 Teşekkürler

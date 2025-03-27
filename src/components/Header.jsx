@@ -29,25 +29,16 @@ function Header() {
         darkMode ? "bg-gray-800" : "bg-white"
       } shadow-sm transition-colors duration-300 sticky top-0 z-30`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center">
           {/* Logo ve başlık */}
           <div className="flex items-center">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-sm">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                />
-              </svg>
+            <div className="w-10 h-10 flex items-center justify-center">
+              <img
+                src="/g.png"
+                alt="Görevio Logo"
+                className="w-10 h-10 object-contain"
+              />
             </div>
             <h1
               className={`ml-3 text-xl font-semibold transition-colors duration-300 ${
